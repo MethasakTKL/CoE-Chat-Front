@@ -1,0 +1,51 @@
+.roomAndUsersColumn{
+    width: 300px;
+    height: 600;
+    max-height: 900px;
+    background-color: rgb(34, 36, 53);
+    margin-top: 10%;
+    border-radius: 15px;
+
+}
+
+.roomnametitle{
+    color: rgb(171, 176, 176);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 11pt;
+}
+
+.roomname{
+    color: rgb(255, 255, 255);
+    padding-top: 5px;
+    text-align: center;
+    font-size: 28pt;
+    font-weight: 600;
+}
+
+.LeftBar{
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.userbox{
+    
+    color: rgb(205, 205, 204);
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin: auto;
+}
+
+.titleuser{
+    color: azure;
+    font-size: large;
+    padding-left: 25px;
+    font-weight: 600;
+}

@@ -2,7 +2,7 @@
 
 import styles from './styles.module.css';
 import { useState, useEffect, useRef } from 'react';
-
+import './messages.css'
 const Messages = ({ socket }) => {
   const [messagesRecieved, setMessagesReceived] = useState([]);
   const messagesColumnRef = useRef(null); // Add this

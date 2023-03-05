@@ -1,6 +1,10 @@
 import styles from './styles.module.css';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './room-and-users.css'
+import { Box } from '@mui/system';
+import PersonIcon from '@mui/icons-material/Person';
+import { Button, Grid } from '@mui/material';
 
 const RoomAndUsers = ({ socket, username, room }) => {
   const [roomUsers, setRoomUsers] = useState([]);
@@ -24,29 +28,39 @@ const RoomAndUsers = ({ socket, username, room }) => {
   };
 
   return (
-    <div className={styles.roomAndUsersColumn}>
-      <h2 className={styles.roomTitle}>{room}</h2>
+    <Box className="roomAndUsersColumn">
+      <div className='roomnametitle'>Room name</div>
+      <div className='roomname'>{room}</div>
+
 
       <div>
-        {roomUsers.length > 0 && <h5 className={styles.usersTitle}>Users:</h5>}
-        <ul className={styles.usersList}>
+        {roomUsers.length > 0 && 
+        <div className="titleuser">
+        
+            <p>ผู้ใช้งานขณะนี้</p>
+        </div>
+        }
+        <Grid container spacing={2} columns={16}>
           {roomUsers.map((user) => (
-            <li
-              style={{
-                fontWeight: `${user.username === username ? 'bold' : 'normal'}`,
-              }}
-              key={user.id}
-            >
+            <Grid key={user.id} >
+              <div className='userbox'>
               {user.username}
-            </li>
+              </div>
+            </Grid>
           ))}
-        </ul>
+        </Grid>
       </div>
-
-      <button className='btn btn-outline' onClick={leaveRoom}>
-        Leave
-      </button>
-    </div>
+      <Box textAlign='center'  paddingTop={"120%"}>
+                <Button
+                    variant="contained"
+                    onClick={leaveRoom}
+                    className="buttonjoin"
+                    sx={{ height: 60, width: 200, borderRadius: 5}}
+                >
+                    <div style={{ fontSize: "14pt" }}>ออกจากห้อง</div>
+                </Button>
+            </Box>
+    </Box>
   );
 };
 
