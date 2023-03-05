@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <div className={styles.formContainer}>
-        <h1>{`<>DevRooms</>`}</h1>
+        <h1>{`COE Chat`}</h1>
         <input className={styles.input} placeholder='Username...' />
 
         <select className={styles.input}>
@@ -15,7 +15,7 @@ const Home = () => {
           <option value='react'>React</option>
         </select>
 
-        <button className='btn btn-secondary'>Join Room</button>
+        <button className='btn btn-secondary' style={{ width: '100%' }}>Join Room</button>
       </div>
     </div>
   );
