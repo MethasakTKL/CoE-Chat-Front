@@ -44,23 +44,34 @@ padding-top: 20px;
 }
 
 .TitleBox{
-font-size: 40pt;
-font-weight: 600;
+font-size: 45pt;
+font-weight: 800;
 text-align: center;
 padding-top: 8%;
 padding-bottom: 50px;
 }
 
 .buttonjoin{
-width: 80%;
+width: 65%;
 }
 
 .Box{
-width: 450px;
-height: 500px;
+width: 500px;
+height: 600px;
 margin-top: 50px;
 margin-left: auto;
 margin-right: auto;
 border-radius: 25px;
-background-color: aliceblue;
+background-color: rgb(255, 255, 255);
 }
+
+
+.Box1{
+  width: 500px;
+  height: 600px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  background-color: rgb(255, 255, 255);
+  }

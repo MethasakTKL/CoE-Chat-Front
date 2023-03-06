@@ -8,6 +8,7 @@ import Select from '@mui/material/Select';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { height, padding } from '@mui/system';
+import { red } from '@mui/material/colors';
 
 const Home = ({ username, setUsername, room, setRoom, socket }) => {
     const navigate = useNavigate(); // Add this
@@ -20,9 +21,12 @@ const Home = ({ username, setUsername, room, setRoom, socket }) => {
     };
     return (
         <div className='Box'>
-            <div className='TitleBox'>
-                COE Chat
-            </div>
+            <center>
+                <img src="https://sv1.picz.in.th/images/2023/03/06/ec6MkZ.png" alt="Logo.png" 
+                border="0"
+                width="55%" />
+            </center>
+            
             <div className='form'>
                 <FormControl fullWidth>
                     <TextField
@@ -45,14 +49,14 @@ const Home = ({ username, setUsername, room, setRoom, socket }) => {
                     </Select>
                 </FormControl>
             </div>
-            <Box textAlign='center' paddingTop={5}>
+            <Box textAlign='center' paddingTop={5}  >
                 <Button
-                    variant="contained"
+                    variant="string" 
                     onClick={joinRoom}
                     className="buttonjoin"
-                    sx={{ height: 60, width: 200, borderRadius: 5 }}
+                    sx={{ height: 60, width: 150, borderRadius: 6, backgroundColor: 'rgb(160, 96, 255)'}}
                 >
-                    <div style={{ fontSize: "14pt" }}>Join Room</div>
+                    <div style={{ fontSize: "14pt" ,fontWeight: "600"}}>Join Room</div>
                 </Button>
             </Box>
         </div>
