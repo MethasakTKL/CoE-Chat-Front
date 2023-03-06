@@ -29,7 +29,7 @@ const RoomAndUsers = ({ socket, username, room }) => {
 
   return (
     <Box className="roomAndUsersColumn">
-      <div className='roomnametitle'>Room name</div>
+      <div className='roomnametitle'>COE-CHAT</div>
       <div className='roomname'>{room}</div>
 
 
