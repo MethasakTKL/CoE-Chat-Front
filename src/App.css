@@ -3,12 +3,12 @@
 html * {
   font-family: Arial;
   box-sizing: border-box;
+  
 }
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background: rgb(45, 48, 88);
+  background: #2D3058;
 }
 ::-webkit-scrollbar {
   width: 20px;

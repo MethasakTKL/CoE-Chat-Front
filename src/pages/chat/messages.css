@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+
+.time{
+    color: rgb(176, 178, 181);
+    text-align: right;
+    font-family: 'Prompt', sans-serif;
+}
+.msg{
+    color: aliceblue;
+    font-size: 13pt;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-family: 'Prompt', sans-serif;
+}

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap');
+
+.messagesentbox{
+    width: auto;
+    max-width: 500px;
+    
+}
+.messagesent{
+        color: aliceblue;
+        font-size: 11pt;
+
+
+        font-family: 'Prompt', sans-serif;
+    
+}
