@@ -24,12 +24,11 @@
   }
   .usersList {
     list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 60px;
+
     color: rgb(153, 217, 234);
   }
   .usersList li {
-    margin-bottom: 12px;
+    margin-bottom: 1px;
   }
   
   /* Messages */

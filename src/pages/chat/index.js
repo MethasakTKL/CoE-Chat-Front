@@ -3,10 +3,8 @@ import * as React from "react";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogTitle from "@mui/material/DialogTitle";
-import RoomAndUsersColumn from "./room-and-users"; // Add this
 import MessagesReceived from "./messages";
 import SendMessage from "./send-message";
-import OnlineUser from "./onlineuser";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/system";
 import {
@@ -17,6 +15,8 @@ import {
   Grid,
 } from "@mui/material";
 import "./index.css";
+import BasicSelect from "./onlineuser";
+import RoomAndUsersColumn from "./room-and-users"; // Add this
 
 const Chat = ({ username, room, socket }) => {
   const navigate = useNavigate();
@@ -52,48 +52,47 @@ const Chat = ({ username, room, socket }) => {
             width="100px"
           />
           <div className="roomname">{room}</div>
-          <Button variant="contained" onClick={handleClickOpen} color="success" disabled>
-            <div className="buttonname">ชื่อผู้ใช้งาน : {username}</div>
-            
-          </Button>
-          <Button
-            variant="contained"
-            onClick={handleClickOpen}
-            sx={{ marginLeft: "10px" }}
-            color="success"
-          >
-            <div className="buttonname">ผู้ใช้งานในขณะนี้</div>
-          </Button>
+          <div>
+            <Button
+              variant="contained"
+              onClick={handleClickOpen}
+              color="success"
+              sx={{ marginBottom: "10px" }}
+              disabled
+            >
+              <div className="buttonname">ชื่อผู้ใช้งาน : {username}</div>
+            </Button>
+          </div>
           <Button
             variant="contained"
             onClick={leaveRoom}
-            sx={{ marginLeft: "10px" }}
+            sx={{ marginLeft: "0%" }}
             color="error"
           >
             <div className="buttonname">ออกจากห้อง</div>
           </Button>
+          <div className="buttonname1">ผู้ใช้งานในขณะนี้</div>
+          <div>
+            <Box
+              sx={{
+                width: "300px",
+                marginLeft: "auto",
+                marginRight: "auto",
+                marginTop: "10px",
+                marginBottom: "10px",
+              }}
+            >
+              <RoomAndUsersColumn
+                socket={socket}
+                username={username}
+                room={room}
+              />
+            </Box>
+          </div>
 
           {/* <Button variant="contained" onClick={handleClickOpen}>
         User
       </Button> */}
-          <Dialog
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
-          >
-            <DialogTitle id="alert-dialog-title">
-              <div className="popuser">ผู้ใช้งานอยู่ในขณะนี้</div>
-            </DialogTitle>
-            <DialogContent sx={{ width: "300px" }}>
-              <DialogContentText id="alert-dialog-description"></DialogContentText>
-            </DialogContent>
-            <DialogActions>
-              <Button variant="contained" onClick={handleClose}>
-                <div className="buttonname">ปิดหน้าต่าง</div>
-              </Button>
-            </DialogActions>
-          </Dialog>
         </Box>
       </center>
 
